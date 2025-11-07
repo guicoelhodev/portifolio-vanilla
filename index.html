@@ -46,7 +46,7 @@
 				frameworks.
 			</p>
 
-			<aside class="bg-blue-50 p-4 pt-2 rounded-md text-sm sm:text-lg self-start">
+			<aside class="mt-4 bg-blue-50 p-4 pt-2 rounded-md text-sm sm:text-lg self-center">
 				<p class="text-blue-800">
 					An example of using other tools is this website — I’m using
 					<span class="font-semibold">
@@ -59,10 +59,10 @@
 			</aside>
 		</article>
 
-		<section class="flex flex-col lg:gap-16 lg:flex-row mt-4">
+		<section class="flex flex-col justify-evenly lg:gap-16 lg:flex-row mt-4">
 			<div class="flex flex-col">
 				<h2 class="text-lg font-semibold">Professional Experience</h2>
-				<section x-data="goals" class="flex-1 flex flex-col gap-16 py-4">
+				<section x-data="goals" class="flex flex-col gap-16 py-4">
 					<template x-for="(goal, index) in goals">
 						<article class="flex">
 							<aside
@@ -83,7 +83,7 @@
 
 			<div>
 				<h2 class="text-lg font-semibold">Educacional Background</h2>
-				<section x-data="study" class="flex flex-1 flex-col gap-16 py-4">
+				<section x-data="study" class="flex flex-col gap-16 py-4">
 					<template x-for="(item, index) in study">
 						<article class="flex">
 							<aside
@@ -103,11 +103,11 @@
 		</section>
 
 		<h2 class="text-xl font-semibold text-neutral-600">My Projects</h2>
-		<ul x-data="projects" class="grid gap-4 sm:grid-cols-2">
+		<ul x-data="projects" class="grid gap-4 sm:grid-cols-2" x-cloak>
 			<template x-for="project in projects">
 				<a target="_blank" class="hover:scale-95 transition-transform duration-300" :href="project.href">
 					<li class="flex flex-col gap-2 bg-white shadow-sm rounded-md h-full">
-						<img class="h-48 sm:h-64 aspect-video object-cover rounded-md rounded-b-none" :src="project.src" />
+						<img class="h-48 sm:h-64 aspect-video object-cover rounded-md rounded-b-none" :src="project.src" loading="lazy"/>
 						<section class="p-2 flex flex-col gap-2">
 							<header class="flex gap-4 flex-wrap justify-between">
 								<h3 class="text-lg font-semibold text-cyan-500" x-text="project.title"></h3>
@@ -126,5 +126,11 @@
 		</ul>
 	</main>
 </body>
+
+<style>
+	[x-cloak] {
+		display: none !important;
+	}
+</style>
 
 </html>
