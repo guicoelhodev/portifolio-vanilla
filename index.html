@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portifolio &lt;guicoelhodev&gt;</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+	<script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="p-4 min-h-screen size-full flex flex-col gap-4">
+		<h1>Hello world d</h1>
+
+		<div x-data="{ count: 0 }" class="flex flex-col border-2 p-4">
+			<button @click="count++" class="p-2 bg-red-400">Add more</button>
+
+			<p>Count: <span x-text="count"></span><p>
+		</div>
+</body>
+</html>
