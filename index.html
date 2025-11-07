@@ -62,11 +62,11 @@
 		<section class="flex flex-col justify-evenly lg:gap-16 lg:flex-row mt-4">
 			<div class="flex flex-col">
 				<h2 class="text-lg font-semibold">Professional Experience</h2>
-				<section x-data="goals" class="flex flex-col gap-16 py-4">
+				<section x-data="goals" class="flex flex-col py-4">
 					<template x-for="(goal, index) in goals">
-						<article class="flex">
+						<article class="flex h-32">
 							<aside
-								class="w-20 h-20 aspect-square border-4 border-neutral-300 flex items-center justify-center rounded-full relative text-neutral-500">
+								class="w-20 h-20 aspect-square border-4 border-neutral-300 flex items-center justify-center rounded-full relative text-neutral-500 bg-white">
 								<p x-text="goal.year"></p>
 								<span x-show="index !== 2" class="h-full w-1 bg-neutral-300 absolute translate-y-[100%]"></span>
 							</aside>
@@ -82,11 +82,11 @@
 
 			<div>
 				<h2 class="text-lg font-semibold">Educacional Background</h2>
-				<section x-data="study" class="flex flex-col gap-16 py-4">
+				<section x-data="study" class="flex flex-col py-4">
 					<template x-for="(item, index) in study">
-						<article class="flex">
+						<article class="flex h-32">
 							<aside
-								class="w-20 h-20 aspect-square border-4 border-neutral-300 flex items-center justify-center rounded-full relative text-neutral-500">
+								class="w-20 h-20 aspect-square border-4 border-neutral-300 flex items-center justify-center rounded-full relative text-neutral-500 bg-white">
 								<p x-text="item.year"></p>
 								<span x-show="index !== 2" class="h-full w-1 bg-neutral-300 absolute translate-y-[100%]"></span>
 							</aside>
