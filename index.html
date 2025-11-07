@@ -104,9 +104,11 @@
 		<h2 class="text-xl font-semibold text-neutral-600">My Projects</h2>
 		<ul x-data="projects" class="grid gap-4 sm:grid-cols-2" x-cloak>
 			<template x-for="project in projects">
-				<a target="_blank" class="hover:scale-95 transition-transform duration-300" :href="project.href">
-					<li class="flex flex-col gap-2 bg-white shadow-sm rounded-md h-full">
-						<img class="h-48 sm:h-64 aspect-video object-cover rounded-md rounded-b-none" :src="project.src" loading="lazy"/>
+				<li class="bg-white shadow-sm rounded-md h-full">
+					<a target="_blank" class="hover:scale-95 transition-transform duration-300 flex flex-col gap-2 "
+						:href="project.href">
+						<img class="h-48 sm:h-64 aspect-video object-cover rounded-md rounded-b-none" :src="project.src"
+							:alt="project.title" loading="lazy" />
 						<section class="p-2 flex flex-col gap-2">
 							<header class="flex gap-4 flex-wrap justify-between">
 								<h3 class="text-lg font-semibold text-cyan-500" x-text="project.title"></h3>
@@ -119,7 +121,7 @@
 
 							<p x-text="project.description" class="text-neutral-600"></p>
 						</section>
-					</li>
+				</li>
 				</a>
 			</template>
 		</ul>
