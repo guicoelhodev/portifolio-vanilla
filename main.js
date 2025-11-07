@@ -3,7 +3,7 @@ document.addEventListener('alpine:init', () => {
 		projects: [
 			{
 				title: "Pomodoro lofi",
-				src: "./assets/radio_lofi.png",
+				src: "./assets/radio_lofi.webp",
 				href: "https://radio.guicoelhodev.com/",
 				languages: [
 					'lni lni-svelte text-2xl text-orange-600',
@@ -13,7 +13,7 @@ document.addEventListener('alpine:init', () => {
 			},
 			{
 				title: "React Music",
-				src: "./assets/react_music.png",
+				src: "./assets/react_music.webp",
 				href: "https://react-music-xi.vercel.app/",
 				languages: [
 					'lni lni-react text-2xl text-neutral-600',
@@ -23,7 +23,7 @@ document.addEventListener('alpine:init', () => {
 			},
 			{
 				title: "Pokedex",
-				src: "./assets/pokedex.png",
+				src: "./assets/pokedex.webp",
 				href: "https://pokedex.guicoelhodev.com/",
 				languages: [
 					'lni lni-nextjs text-2xl',
@@ -33,7 +33,7 @@ document.addEventListener('alpine:init', () => {
 			},
 			{
 				title: "Discord clone",
-				src: "./assets/discord_ui_clone.png",
+				src: "./assets/discord_ui_clone.webp",
 				href: "https://pokedex.guicoelhodev.com/",
 				languages: [
 					'lni lni-vuejs text-2xl text-green-500',
