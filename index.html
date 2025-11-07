@@ -11,21 +11,27 @@
 	<link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
 </head>
 
-<body class="p-4 min-h-screen size-full flex flex-col gap-4 bg-neutral-50 text-neutral-600">
+<body class="p-4 min-h-screen size-full flex flex-col gap-4 bg-neutral-50 text-neutral-600 pb-8">
 
 	<main class="max-w-[1366px] mx-auto flex flex-col gap-4">
 
-		<h1
-			class="bg-gradient-to-r from-purple-600 to-red-500 bg-clip-text text-3xl font-extrabold text-transparent lg:text-4xl mt-4">
-			I like to build new things, outside of the box [ ]
-		</h1>
+		<header class="flex items-center justify-between gap-4">
+			<h1
+				class="bg-gradient-to-r from-purple-600 to-red-500 bg-clip-text text-3xl font-extrabold text-transparent lg:text-4xl mt-4">
+				I like to build new things, outside of the box [ ]
+			</h1>
+
+			<a href="https://www.linkedin.com/in/guicoelhodev/" target="_blank">
+				<i class="lni lni-linkedin text-5xl sm:text-6xl text-blue-600 translate-y-1"></i>
+			</a>
+		</header>
 		<article class="flex flex-col gap-4">
-			<p class="text-xl font-semibold">
+			<p class="sm:text-xl font-semibold">
 				My name is Guilherme Coelho. I’ve been working as a web
 				developer since 2022.
 			</p>
 
-			<p class="text-lg">
+			<p class="sm:text-lg">
 				I currently work with
 				<span class="text-blue-800 font-semibold">
 					React
@@ -40,7 +46,7 @@
 				frameworks.
 			</p>
 
-			<aside class="bg-blue-50 p-4 pt-2 rounded-md text-lg self-start">
+			<aside class="bg-blue-50 p-4 pt-2 rounded-md text-sm sm:text-lg self-start">
 				<p class="text-blue-800">
 					An example of using other tools is this website — I’m using
 					<span class="font-semibold">
@@ -53,7 +59,49 @@
 			</aside>
 		</article>
 
-		<div class="h-[300px]"></div>
+		<section class="flex flex-col lg:gap-16 lg:flex-row mt-4">
+			<div class="flex flex-col">
+				<h2 class="text-lg font-semibold">Professional Experience</h2>
+				<section x-data="goals" class="flex-1 flex flex-col gap-16 py-4">
+					<template x-for="(goal, index) in goals">
+						<article class="flex">
+							<aside
+								class="w-20 h-20 aspect-square border-4 border-neutral-300 flex items-center justify-center rounded-full relative text-neutral-500">
+								<p x-text="goal.year"></p>
+								<span x-show="index !== 2" class="h-full w-1 bg-neutral-300 absolute translate-y-[100%]"></span>
+							</aside>
+
+							<div class="p-4">
+								<h4 x-text="goal.role" class="text-lg text-neutral-800"></h4>
+								<p class="text-sm" x-text="goal.company"></p>
+							</div>
+
+						</article>
+					</template>
+				</section>
+			</div>
+
+			<div>
+				<h2 class="text-lg font-semibold">Educacional Background</h2>
+				<section x-data="study" class="flex flex-1 flex-col gap-16 py-4">
+					<template x-for="(item, index) in study">
+						<article class="flex">
+							<aside
+								class="w-20 h-20 aspect-square border-4 border-neutral-300 flex items-center justify-center rounded-full relative text-neutral-500">
+								<p x-text="item.year"></p>
+								<span x-show="index !== 2" class="h-full w-1 bg-neutral-300 absolute translate-y-[100%]"></span>
+							</aside>
+							<div class="p-4">
+								<h4 x-text="item.role" class="text-lg text-neutral-800"></h4>
+								<p class="text-sm" x-text="item.company"></p>
+							</div>
+
+						</article>
+					</template>
+				</section>
+			</div>
+		</section>
+
 		<h2 class="text-xl font-semibold text-neutral-600">My Projects</h2>
 		<ul x-data="projects" class="grid gap-4 sm:grid-cols-2">
 			<template x-for="project in projects">

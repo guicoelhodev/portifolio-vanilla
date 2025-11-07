@@ -10,7 +10,6 @@ console.log('File was loaded')
 	* 	}>}
 	*/
 function getProjects() {
-
 	return [
 		{
 			title: "Pomodoro lofi",
@@ -55,8 +54,56 @@ function getProjects() {
 	]
 }
 
+
+/** @function getCarreerGoals
+	* @returns {Array<{ 
+	* 	role: string,
+	* 	year: string,
+	* 	company: string
+	* 	}>}
+	*/
 document.addEventListener('alpine:init', () => {
 	Alpine.data('projects', () => ({
 		projects: getProjects()
+	}))
+
+	Alpine.data('goals', () => ({
+		goals: [
+			{
+				role: 'Mid level developer - Angular and Node',
+				year: '2025',
+				company: 'Wake Creators.'
+			},
+			{
+				role: 'Mid level developer - Next js',
+				year: '2023',
+				company: 'Vereda Educação'
+			},
+			{
+				role: 'Junior frontend developer - Next js',
+				year: '2022',
+				company: 'Vereda Educação'
+			},
+		]
+	}))
+
+	Alpine.data('study', () => ({
+		study: [
+			{
+				role: 'Postgraduate Degree in Data Structures',
+				year: '2026',
+				company: '(USP) - Coming soon'
+			},
+			{
+				role: 'Bachelor’s Degree in Computer Science',
+				year: '2020',
+				company: 'FAM - University'
+			},
+			{
+				role: 'Electronics Technician',
+				year: '2019',
+				company: 'Liceu de Artes e Ofícios de São Paulo'
+			}
+		]
 	}))
 })
